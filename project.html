@@ -1,0 +1,55 @@
+<<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>RWD-CSS</title>
+        <style>
+            section{
+                border:1px solid red ;
+                display: grid;
+                grid-template-columns: repeat(4,1fr);
+                padding: 5px;
+                grid-gap: 5px;
+
+            }
+            div{
+                border: 1px solid;
+                padding: 10px;
+                text-align: center;
+            }
+            @media only screen and (min-width:320px) and (max-width:576px)
+             {
+                section{
+                    grid-template-columns:repeat(1,1fr)
+                }
+         
+            }
+            @media only screen and (min-width:576px) and (max-width:900px)
+            {
+                section{
+                    grid-template-columns:repeat(2,1fr)
+                }
+            }
+            @media only screen and (min-width:900px) and (max-width:1000px)
+            {
+                section{
+                    grid-template-columns:repeat(3,1fr)
+                }
+            }
+            @media only screen and (min-width:1240px) and (max-width:1400px)
+            {
+                section{
+                    grid-template-columns:repeat(4,1fr)
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <section>
+            <div>SAMLL-Device</div>
+            <div>MEDIUM-Device</div>
+            <div>LARGE-Device</div>
+            <div>EXTRA-LARGE -Device</div>
+        </section>
+    </body>
+</html>
